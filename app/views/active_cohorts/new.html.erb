@@ -1,0 +1,11 @@
+<%= form_for @active_cohort do |f| %>
+
+  <%= f.label :student_id, 'Student' %>
+  <%= f.select :student_id, options_for_select(@students.map {|s| [s.first_name, s.id]}) %>
+
+
+  <%= f.label :cohort_id, 'Cohort' %>
+  <%= f.select :cohort_id, options_for_select(@cohorts.map {|c| [c.name, c.id]}) %>
+<br>
+<%= f.submit %>
+<% end %>

@@ -1,0 +1,36 @@
+<h1>Create A New Cohort </h1>
+
+<%= form_for @cohort do |f| %>
+
+<div>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+</div>
+<div>
+  <%= f.label :start_date%>
+  <%= f.text_field :start_date %>
+</div>
+<div>
+  <%= f.label :end_date %>
+  <%= f.text_field :end_date %>
+
+</div>
+<div>
+
+  <%= f.label :instructor_id, 'Instructor' %>
+  <%= f.select :instructor_id, options_for_select(@instructors.map {|i| [i.first_name, i.id]}) %>
+
+</div>
+
+<div>
+  <% f.label :course_id, 'Course' %>
+  <%= f.select :course_id, options_for_select(@courses.map {|c| [c.name, c.id]}) %>
+</div>
+
+<div>
+  <%=f.submit %>
+
+</div>
+
+<% end %>

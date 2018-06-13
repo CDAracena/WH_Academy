@@ -1,0 +1,19 @@
+<h1>Welcome To Washington Heights Academy's Admin Panel <%=@user.email %>
+</h1>
+
+<div>
+  <%= link_to 'View Student Database', students_path %>
+  |
+  <%= link_to 'View Instructor Database', instructors_path %>
+  |
+  <%= link_to 'View Courses Database', courses_path %>
+  |
+  <%= link_to 'View Cohorts Database', cohorts_path %>
+  |
+  <%= link_to 'View Current Cohorts', active_cohorts_path %>
+</div>
+
+
+<div>
+  <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
+</div>

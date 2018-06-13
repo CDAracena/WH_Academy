@@ -1,0 +1,21 @@
+<h4>
+  Instructor Stats</h4>
+
+<div>
+  Instructor Name:
+  <%= @instructor.first_name %>
+  <%= @instructor.last_name %>
+
+</div>
+
+<div>
+  Salary: $<%= @instructor.salary %>
+</div>
+
+<div>
+  Highest Education Completed:
+  <%= @instructor.highest_education %>
+</div>
+<div>
+  <%=@instructor.cohorts.name %>
+</div>

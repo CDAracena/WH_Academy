@@ -1,0 +1,21 @@
+<h1>Create A New Course </h1>
+
+<%= form_for @course do |f| %>
+
+<div>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+</div>
+<div>
+  <%= f.label :total_class_hours%>
+  <%= f.text_field :total_class_hours %>
+</div>
+
+
+<div>
+  <%=f.submit %>
+
+</div>
+
+<% end %>

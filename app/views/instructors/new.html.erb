@@ -1,0 +1,28 @@
+<h4>Create a new instructor
+</h4>
+<%= form_for @instructor do |f| %>
+
+<div>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+
+</div>
+<div>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+</div>
+
+<div>
+  <%= f.label :salary %>
+  <%= f.text_field :salary %>
+</div>
+
+<%= f.label :highest_education %>
+<%= f.text_field :highest_education %>
+
+<div>
+  <%=f.submit %>
+
+</div>
+
+<% end %>

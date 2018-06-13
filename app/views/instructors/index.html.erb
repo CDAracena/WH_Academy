@@ -1,0 +1,22 @@
+<h1>Welcome To The Instructor Database
+</h1>
+<%= link_to 'Add A New Instructor', new_instructor_path %>
+
+<div>
+
+  <% @instructors.each do |instructor| %>
+
+    <div>
+      <%= instructor.first_name %>
+      <%= instructor.last_name %>
+      <%=link_to 'View Instructor Stats', instructor_path(instructor) %>
+      |
+      <%=link_to 'Edit Instructor', edit_instructor_path(instructor) %>
+      |
+      <%= link_to 'Delete Instructor', instructor_path(instructor), method: :delete %>
+    </div>
+    <br>
+
+  <% end %>
+
+</div>

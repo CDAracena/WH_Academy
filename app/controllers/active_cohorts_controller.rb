@@ -1,0 +1,52 @@
+class ActiveCohortsController < ApplicationController
+
+  def index
+    @active_cohorts = ActiveCohort.all
+
+  end
+
+  def show
+    @active_cohorts = ActiveCohort.all
+
+  end
+
+  def new
+    @cohorts = Cohort.all
+    @students = Student.all
+    @active_cohort = ActiveCohort.new
+
+  end
+
+  def create
+    ActiveCohort.create(active_cohorts_params)
+
+    redirect_to active_cohorts_path
+  end
+
+  def edit
+
+  end
+
+  def update
+
+  end
+
+  def destroy
+
+    ActiveCohort.destroy(params[:id])
+
+    redirect_to active_cohorts_path
+
+  end
+
+  private
+
+  def active_cohorts_params
+    # will return something that looks like this:
+    # {name: '....', :description: '...'}
+
+      params.require(:active_cohort).permit(:student_id, :cohort_id)
+  end
+
+
+end

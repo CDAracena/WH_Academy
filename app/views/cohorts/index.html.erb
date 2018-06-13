@@ -1,0 +1,20 @@
+<h1>Welcome to the Cohorts Database</h1>
+
+<div>
+  <%= link_to 'Create A New Cohort', new_cohort_path %>
+
+  <% @cohorts.each do |cohort| %>
+    <div>
+
+      <%= cohort.name %>
+
+    </div> 
+
+    <%= link_to 'View Cohort Information', cohort_path(cohort) %> |
+    <%= link_to 'Edit Cohort', edit_cohort_path(cohort) %> |
+    <%= link_to 'Delete Cohort', cohort_path(cohort), method: :delete %>
+
+
+  <% end %>
+
+</div>

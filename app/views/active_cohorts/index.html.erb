@@ -1,0 +1,12 @@
+<h1> Current Active Cohorts</h1>
+
+<%= link_to 'Create A New Active Cohort', new_active_cohort_path %><br />
+<% @active_cohorts.each do |cohort| %>
+
+
+<%= cohort.student.first_name %>
+<%= cohort.student.last_name %>
+<%= cohort.cohort.name %>
+<%= link_to 'Delete Active Cohort', active_cohort_path(cohort), method: :delete %>
+<br>
+<% end %>

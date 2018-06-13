@@ -1,0 +1,24 @@
+<h4>Edit An Instructor's Information
+</h4>
+<%= form_for @instructor do |f| %>
+
+<div>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+
+</div>
+<div>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+</div>
+
+<div>
+  <%= f.label :salary %>
+  <%= f.text_field :salary %>
+</div>
+
+<div>
+  <%=f.submit %>
+
+</div>
+<% end %>
