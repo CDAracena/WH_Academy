@@ -17,14 +17,59 @@
  *= require_self
  */
 
+
+
  @import 'partials/variables';
  @import 'partials/mixins';
-
+ @import url('https://fonts.googleapis.com/css?family=Alegreya');
+@import url('https://fonts.googleapis.com/css?family=Alegreya|IBM+Plex+Serif');
  body {
    background-color: $primary-color;
    color: $text-color;
+   font-family:'IBM Plex Serif', serif;
  }
 
 .headingTitles {
   color: $heading-colors;
+}
+.headImg {
+  height: 300px;
+  text-align: center;
+}
+
+.JumboTitle {
+  color: #4faaa8;
+  font-family: $main-font;
+  text-shadow: 2px 1px #6e6d45;
+  font-size: $large-font;
+
+}
+
+.jumboCustomize {
+  height: 50vh;
+  background-image: url('/school_hallway.png');
+  box-shadow: 2px 3px #4eaaa8;
+  border-bottom: 2px solid $border-bottom-color;
+}
+
+.buttonCustomize {
+  background-color: $btn-background-color;
+  color: $btn-font-color;
+  font-family: $main-font;
+  box-sizing:border-box;
+  border: 2px solid #afcc4f;
+  font-size: 20px;
+}
+
+.buttonCustomize:hover {
+  opacity: 0.8;
+}
+
+
+a.UserLinks {
+    background-color: $btn-background-color;
+    color: $btn-font-color;
+}
+a.UserLinks:hover {
+
 }
