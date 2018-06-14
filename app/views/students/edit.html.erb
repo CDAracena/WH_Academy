@@ -1,26 +1,45 @@
-<h2>Edit Student </h2>
+<div class="container-fluid">
+  <div class="row mx-auto">
+    <div class="col-lg-12 text-center py-3">
+      <h2>Edit Student
+      </h2>
+    </div>
+  </div>
 
-<%= form_for @student do |f| %>
-<div>
-  <%= f.label :first_name %>
-  <%= f.text_field :first_name %>
-</div>
-<div>
-  <%= f.label :last_name %>
-  <%= f.text_field :last_name %>
-</div>
+  <%= form_for @student do |f| %>
 
-<div>
-  <%= f.label :age %>
-  <%= f.text_field :age %>
-</div>
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, class:'form-control' %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, class:'form-control' %>
+    </div>
+  </div>
 
-<div>
-  <%= f.label :highest_education %>
-  <%= f.text_field :highest_education %>
-</div>
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <%= f.label :age %>
+      <%= f.text_field :age, class:'form-control' %>
+    </div>
+  </div>
 
-<div>
-  <%= f.submit %>
-</div>
+  <div class="row">
+    <div class="col-lg-6 mx-auto">
+      <%= f.label :highest_education %>
+      <%= f.text_field :highest_education, class:'form-control' %>
+    </div>
+  </div>
+
+  <div class="row mx-auto py-2">
+    <div class="col-lg-12 text-center">
+      <%= f.submit "Update Student", class:' btn secondButton' %>
+    </div>
+  </div>
 <% end %>
+
+</div>

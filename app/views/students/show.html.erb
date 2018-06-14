@@ -1,19 +1,32 @@
-<h1>Student's Information
-</h1>
+<div class="container">
+  <div class="row mx-auto">
+    <div class="col-lg-12 text-center py-4">
+      <h1>Student's Information
+      </h1>
+    </div>
+  </div>
 
-<div>
-  Student Name:
-  <%= @student.first_name %>
-  <%= @student.last_name %>
+  <div class="row">
+    <div class="col-lg-12 text-center stats py-1">
+      Student Name:
+      <%= @student.first_name %>
+      <%= @student.last_name %>
+    </div>
 
-</div>
+  </div>
 
-<div>
-  Student Age:
-  <%= @student.age %>
-</div>
+  <div class="row">
+    <div class="col-lg-12 text-center stats py-1">
+      Student Age:
+      <%= @student.age %>
+    </div>
+  </div>
 
-<div>
-  Highest Education:
-  <%=@student.highest_education %>
+  <div class="row">
+    <div class="col-lg-12 text-center stats py-1">
+      Highest Education:
+      <%=@student.highest_education %>
+    </div>
+  </div>
+
 </div>

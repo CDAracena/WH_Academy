@@ -1,19 +1,31 @@
-<h1>Welcome To Washington Heights Academy's Admin Panel <%=@user.email %>
-</h1>
-
-<div>
-  <%= link_to 'View Student Database', students_path %>
-  |
-  <%= link_to 'View Instructor Database', instructors_path %>
-  |
-  <%= link_to 'View Courses Database', courses_path %>
-  |
-  <%= link_to 'View Cohorts Database', cohorts_path %>
-  |
-  <%= link_to 'View Current Cohorts', active_cohorts_path %>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-lg-12 text-center py-4">
+  <h1>Welcome To Washington Heights Academy's Admin Panel
+    <%=@user.email %>
+  </h1>
 </div>
+</div>
+  <div class="row mx-auto">
+    <div class="col-lg-12 mx-auto">
+      <div>
+        <%= link_to 'View Student Database', students_path, class:'MainNav' %>
+        |
+        <%= link_to 'View Instructor Database', instructors_path, class:'MainNav' %>
+        |
+        <%= link_to 'View Courses Database', courses_path, class:'MainNav' %>
+        |
+        <%= link_to 'View Cohorts Database', cohorts_path, class:'MainNav' %>
+        |
+        <%= link_to 'View Current Cohorts', active_cohorts_path, class:'MainNav' %>
+      </div>
+    </div>
+  </div>
 
+  <div class="row mx-auto py-5">
+    <div class="col-lg-12 text-center">
+      <%= link_to 'Log Out', destroy_user_session_path, method: :delete, class:'btn secondButton logOutExtras' %>
+    </div>
+  </div>
 
-<div>
-  <%= link_to 'Log Out', destroy_user_session_path, method: :delete %>
 </div>

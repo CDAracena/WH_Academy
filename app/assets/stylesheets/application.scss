@@ -70,7 +70,11 @@
 .secondButton {
   background-color: $btn-second-bgcolor;
   border: 1px solid #e95d94;
+  cursor: pointer;
+}
 
+.secondButton:hover {
+  opacity: 0.8;
 }
 
 
@@ -79,5 +83,36 @@ a.UserLinks {
     color: $btn-font-color;
 }
 a.UserLinks:hover {
+opacity: 0.8;
+}
 
+a.MainNav {
+  color: #e7f4f5;
+  text-decoration: none;
+  font-size: 22px;
+}
+
+a.MainNav:hover {
+  border-bottom: 2px solid #4eaaa8;
+  text-shadow: 1px 1px grey;
+}
+
+a.logOutExtras {
+  color: #1f2926;
+}
+a.logOutExtras:hover {
+  opacity: 0.8;
+}
+
+a.addBtns {
+  font-size: 20px;
+  color: #e7f4f5;
+}
+
+a.addBtns:hover {
+  box-shadow: 1px 2px 2px 2px #568953;
+}
+
+.stats {
+  font-size: $stats-FS;
 }
