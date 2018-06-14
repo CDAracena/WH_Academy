@@ -27,6 +27,8 @@
    background-color: $primary-color;
    color: $text-color;
    font-family:'IBM Plex Serif', serif;
+   height: 100vh;
+   border-bottom: 10px solid #ab7636;
  }
 
 .headingTitles {
@@ -57,12 +59,18 @@
   color: $btn-font-color;
   font-family: $main-font;
   box-sizing:border-box;
-  border: 2px solid #afcc4f;
+  border: 2px solid #e95d94;
   font-size: 20px;
 }
 
 .buttonCustomize:hover {
   opacity: 0.8;
+}
+
+.secondButton {
+  background-color: $btn-second-bgcolor;
+  border: 1px solid #e95d94;
+
 }
 
 
