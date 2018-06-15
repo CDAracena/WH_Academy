@@ -1,21 +1,34 @@
-<h4>
-  Instructor Stats</h4>
+<div class="container">
+  <div class="row mx-auto">
+    <div class="col-lg-12 text-center py-4">
+      <h1>
+        Instructor's Information</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 text-center stats py-1">
+      Instructor Name:
+      <%= @instructor.first_name %>
+      <%= @instructor.last_name %>
+    </div>
+  </div>
 
-<div>
-  Instructor Name:
-  <%= @instructor.first_name %>
-  <%= @instructor.last_name %>
+  <div class="row">
+    <div class="col-lg-12 text-center stats py-1">
+      Salary: $<%= @instructor.salary %>
+    </div>
+  </div>
 
-</div>
+  <div class="row">
+    <div class="col-lg-12 text-center stats py-1">
+      Highest Education Completed:
+      <%= @instructor.highest_education %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 text-center stats py-1">
+      <%= @instructor.cohorts.name %>
+    </div>
+  </div>
 
-<div>
-  Salary: $<%= @instructor.salary %>
-</div>
-
-<div>
-  Highest Education Completed:
-  <%= @instructor.highest_education %>
-</div>
-<div>
-  <%= @instructor.cohorts.name %>
 </div>
