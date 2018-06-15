@@ -1,22 +1,49 @@
-<h1>Welcome To The Instructor Database
-</h1>
-<%= link_to 'Add A New Instructor', new_instructor_path %>
-
-<div>
-
-  <% @instructors.each do |instructor| %>
-
-    <div>
-      <%= instructor.first_name %>
-      <%= instructor.last_name %>
-      <%=link_to 'View Instructor Stats', instructor_path(instructor) %>
-      |
-      <%=link_to 'Edit Instructor', edit_instructor_path(instructor) %>
-      |
-      <%= link_to 'Delete Instructor', instructor_path(instructor), method: :delete %>
+<div class="container-fluid">
+  <div class="row">
+    <div class="headingTitles mx-auto">
+      <h1>Instructor Database
+      </h1>
     </div>
-    <br>
+  </div>
+  <div class="row mx-auto">
+    <div class="col-lg-12 mx-auto">
+      <div>
+        <%= link_to 'View Student Database', students_path, class:'MainNav' %>
+        |
+        <%= link_to 'View Instructor Database', instructors_path, class:'MainNav' %>
+        |
+        <%= link_to 'View Courses Database', courses_path, class:'MainNav' %>
+        |
+        <%= link_to 'View Cohorts Database', cohorts_path, class:'MainNav' %>
+        |
+        <%= link_to 'View Current Cohorts', active_cohorts_path, class:'MainNav' %>
+      </div>
+    </div>
+  </div>
+  <div class="row mx-auto text-center">
+    <div class="col-lg-12 text-center mx-auto">
+      <%= link_to 'Add A New Instructor', new_instructor_path, class:'btn addBtns' %>
+    </div>
+  </div>
 
-  <% end %>
+  <div class="row mx-auto">
+    <div class="col-lg-6 mx-auto py-2">
 
+      <% @instructors.each do |instructor| %>
+
+        <div class="py-1">
+          <%= instructor.first_name %>
+          <%= instructor.last_name %>
+          <br>
+          <%=link_to 'View Instructor Stats', instructor_path(instructor), class:'UserLinks btn' %>
+          |
+          <%=link_to 'Edit Instructor', edit_instructor_path(instructor), class:'UserLinks btn' %>
+          |
+          <%= link_to 'Delete Instructor', instructor_path(instructor), method: :delete, class:'UserLinks btn' %>
+        </div>
+        <br>
+
+      <% end %>
+    </div>
+  </div>
 </div>

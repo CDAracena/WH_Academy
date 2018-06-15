@@ -1,12 +1,24 @@
-<h2> Course Information </h2>
+<div class="container">
+  <div class="row mx-auto">
+    <div class="col-lg-12 text-center py-4">
+      <h1>
+        Course Information
+      </h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12 text-center stats py-1">
+      Course Name:
+      <%= @course.name %>
+    </div>
+  </div>
 
-<div>
-Course Name:
-  <%= @course.name %>
-</div>
+  <div class="row">
+    <div class="col-lg-12 text-center stats py-1">
+      Total Class Hours:
+      <%= @course.total_class_hours %>
+    </div>
 
-<div>
-  Total Class Hours: 
-  <%= @course.total_class_hours %>
+  </div>
 
 </div>
