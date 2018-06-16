@@ -1,5 +1,5 @@
 class ActiveCohortsController < ApplicationController
-
+before_action :authenticate_user!
   def index
     @active_cohorts = ActiveCohort.all
 
