@@ -14,6 +14,7 @@ class ActiveCohortsController < ApplicationController
     @cohorts = Cohort.all
     @students = Student.all
     @active_cohort = ActiveCohort.new
+    @instructors = Instructor.all
 
   end
 
@@ -45,7 +46,7 @@ class ActiveCohortsController < ApplicationController
     # will return something that looks like this:
     # {name: '....', :description: '...'}
 
-      params.require(:active_cohort).permit(:student_id, :cohort_id)
+      params.require(:active_cohort).permit(:student_id, :cohort_id, :instructor_id)
   end
 
 

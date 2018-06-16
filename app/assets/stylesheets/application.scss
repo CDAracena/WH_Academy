@@ -30,7 +30,7 @@
    color: $text-color;
    font-family:'IBM Plex Serif', serif;
    height: 100vh;
-   border-bottom: 10px solid #ab7636;
+
  }
 
 .headingTitles {
@@ -138,4 +138,8 @@ a.deleteActiveCohort:hover {
 table, tr, td {
   border:1px solid whitesmoke;
   padding:10px;
+}
+
+.brownFooter {
+  border: 10px solid #ab7636;
 }

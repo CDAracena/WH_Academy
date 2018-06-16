@@ -15,6 +15,8 @@
 
       <%= f.label :cohort_id, 'Cohort' %>
       <%= f.select :cohort_id, options_for_select(@cohorts.map {|c| [c.name, c.id]}) %>
+      <%= f.label :instructor_id, 'Instructor' %>
+      <%=f.select :instructor_id, options_for_select(@instructors.map {|i| [i.first_name, i.id]}) %>
     </div>
   </div>
   <br>

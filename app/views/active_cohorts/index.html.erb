@@ -40,6 +40,8 @@
             <th>
               Cohort Name
             </th>
+            <th> Instructor Name
+            </th>
             <th>Start Date
             </th>
             <th>
@@ -57,6 +59,9 @@
               </td>
               <td>
                 <%= cohort.cohort.name %></td>
+                <td> <%= cohort.instructor.first_name %>
+                  <%= cohort.instructor.last_name %>
+                </td>
               <td>
                 <%= cohort.cohort.start_date %>
               </td>
