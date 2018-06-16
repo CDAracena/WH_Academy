@@ -1,19 +1,31 @@
-<h1>
-  Cohort Information
-</h1>
+<div class="container">
+  <div class="row mx-auto">
+    <div class="col-lg-12 text-center py-4">
+      <h1>
+        Cohort Information
+      </h1>
+    </div>
+  </div>
 
-<div>
+  <div class="row">
+    <div class="col-lg-12 text-center stats py-1">
+      Cohort Name:
+      <%= @cohort.name %>
+    </div>
+  </div>
 
-  <%= @cohort.name %>
+  <div class="row">
+    <div class="col-lg-12 text-center stats py-1">
+      Start Date:
+      <%= @cohort.start_date %>
+    </div>
+  </div>
 
-</div>
+  <div class="row">
+    <div class="col-lg-12 text-center stats py-1">
+      Instructor:
+      <%= @cohort.instructor.first_name %>
+    </div>
+  </div>
 
-<div>
-Start Date:
-<%= @cohort.start_date %>
-</div>
-
-<div>
-  Instructor: <%= @cohort.instructor.first_name %>
-  
 </div>
