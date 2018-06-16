@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_12_195257) do
+ActiveRecord::Schema.define(version: 2018_06_16_061314) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,7 +18,9 @@ ActiveRecord::Schema.define(version: 2018_06_12_195257) do
   create_table "active_cohorts", force: :cascade do |t|
     t.bigint "student_id"
     t.bigint "cohort_id"
+    t.bigint "instructor_id"
     t.index ["cohort_id"], name: "index_active_cohorts_on_cohort_id"
+    t.index ["instructor_id"], name: "index_active_cohorts_on_instructor_id"
     t.index ["student_id"], name: "index_active_cohorts_on_student_id"
   end
 
@@ -75,6 +77,7 @@ ActiveRecord::Schema.define(version: 2018_06_12_195257) do
   end
 
   add_foreign_key "active_cohorts", "cohorts"
+  add_foreign_key "active_cohorts", "instructors"
   add_foreign_key "active_cohorts", "students"
   add_foreign_key "cohorts", "courses"
   add_foreign_key "cohorts", "instructors"

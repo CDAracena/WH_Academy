@@ -23,6 +23,8 @@
  @import 'partials/mixins';
  @import url('https://fonts.googleapis.com/css?family=Alegreya');
 @import url('https://fonts.googleapis.com/css?family=Alegreya|IBM+Plex+Serif');
+
+
  body {
    background-color: $primary-color;
    color: $text-color;
@@ -122,4 +124,18 @@ a.addBtns:hover {
   border-radius: $select-BR;
   border: $select-border;
   box-shadow: $select-box-shadow;
+}
+
+a.deleteActiveCohort {
+  color:#c1d46a;
+  text-decoration: none;
+
+}
+a.deleteActiveCohort:hover {
+  color: #ea5143;
+}
+
+table, tr, td {
+  border:1px solid whitesmoke;
+  padding:10px;
 }

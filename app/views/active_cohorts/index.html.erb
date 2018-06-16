@@ -1,12 +1,72 @@
-<h1> Current Active Cohorts</h1>
+<div class="container">
+  <div class="row">
+    <div class="headingTitles mx-auto py-4">
+      <h1>
+        Active Cohorts Database</h1>
+    </div>
+  </div>
+  <div class="row mx-auto">
+    <div class="col-lg-12 mx-auto">
+      <div class="py-2">
+        <%= link_to 'View Student Database', students_path, class:'MainNav' %>
+        |
+        <%= link_to 'View Instructor Database', instructors_path, class:'MainNav' %>
+        |
+        <%= link_to 'View Courses Database', courses_path, class:'MainNav' %>
+        |
+        <%= link_to 'View Cohorts Database', cohorts_path, class:'MainNav' %>
+        |
+        <%= link_to 'View Current Cohorts', active_cohorts_path, class:'MainNav' %>
+      </div>
+    </div>
+  </div>
 
-<%= link_to 'Create A New Active Cohort', new_active_cohort_path %><br />
-<% @active_cohorts.each do |cohort| %>
+  <div class="row mx-auto text-center">
+    <div class="col-lg-12 text-center mx-auto">
+      <%= link_to 'Create A New Active Cohort', new_active_cohort_path, class:'btn addBtns' %><br/>
+    </div>
+  </div>
 
+  <div class="row text-center mx-auto">
+    <div class="col-lg-12">
+      <table class="text-center mx-auto py-1">
 
-<%= cohort.student.first_name %>
-<%= cohort.student.last_name %>
-<%= cohort.cohort.name %>
-<%= link_to 'Delete Active Cohort', active_cohort_path(cohort), method: :delete %>
-<br>
-<% end %>
+        <tr>
+          <tr>
+            <th>Student Name
+            </th>
+            <th>Student Age
+            </th>
+            <th>
+              Cohort Name
+            </th>
+            <th>Start Date
+            </th>
+            <th>
+              Admin Options
+            </th>
+
+          </tr>
+          <% @active_cohorts.each do |cohort| %>
+            <tr>
+              <td>
+                <%= cohort.student.first_name %>
+                <%= cohort.student.last_name %></td>
+              <td>
+                <%= cohort.student.age %>
+              </td>
+              <td>
+                <%= cohort.cohort.name %></td>
+              <td>
+                <%= cohort.cohort.start_date %>
+              </td>
+              <td>
+                <%= link_to 'Delete Active Cohort', active_cohort_path(cohort), method: :delete, class:'deleteActiveCohort' %>
+              </td>
+            </tr>
+
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
