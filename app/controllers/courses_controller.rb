@@ -1,4 +1,5 @@
 class CoursesController < ApplicationController
+  before_action :authenticate_user!
   def index
     @courses = Course.all
 
@@ -35,7 +36,7 @@ class CoursesController < ApplicationController
 
   def destroy
     Course.destroy(params[:id])
- 
+
     redirect_to courses_path
   end
 
