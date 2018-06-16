@@ -116,3 +116,10 @@ a.addBtns:hover {
 .stats {
   font-size: $stats-FS;
 }
+
+.selectOptions {
+  width: $select-width;
+  border-radius: $select-BR;
+  border: $select-border;
+  box-shadow: $select-box-shadow;
+}
