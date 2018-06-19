@@ -11,4 +11,31 @@
 // about supported directives.
 //
 //= require rails-ujs
+//= require jquery/dist/jquery
 //= require_tree .
+
+
+
+$(document).ready(function() {
+
+  if ($('body.students.index').length === 0) {
+    return;
+  }
+
+  $('.deleteCall').click(function(e) {
+    e.preventDefault();
+    let deletionUrl = e.target.getAttribute('href')
+    console.log(deletionUrl)
+    $.ajax({
+      method: 'DELETE',
+      url: deletionUrl,
+      success: function(data) {
+        $(e.target).parents('.main-Students').remove();
+
+      }
+    })
+  })
+
+
+
+})

@@ -1,5 +1,6 @@
 class CoursesController < ApplicationController
   before_action :authenticate_user!
+  skip_before_action :verify_authenticity_token, only: [:destroy]
   def index
     @courses = Course.all
 
@@ -37,7 +38,7 @@ class CoursesController < ApplicationController
   def destroy
     Course.destroy(params[:id])
 
-    redirect_to courses_path
+    render json: {message: 'yo the course was deleted son'}
   end
 
   private
