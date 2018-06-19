@@ -1,5 +1,6 @@
 class ActiveCohortsController < ApplicationController
 before_action :authenticate_user!
+skip_before_action :verify_authenticity_token, only: [:destroy]
   def index
     @active_cohorts = ActiveCohort.all
 
@@ -36,7 +37,7 @@ before_action :authenticate_user!
 
     ActiveCohort.destroy(params[:id])
 
-    redirect_to active_cohorts_path
+    render json: {message: 'yo the active cohort was deleted son'}
 
   end
 

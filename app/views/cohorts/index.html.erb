@@ -29,14 +29,14 @@
     <div class="col-lg-6  mx-auto py-2">
       <% @cohorts.each do |cohort| %>
 
-        <div class="py-1 text-left">
+        <div class="py-1 text-left main-Cohorts">
           <%= cohort.name %>
           <br>
           <%= link_to 'View Cohort Information', cohort_path(cohort), class:'UserLinks btn' %>
           |
           <%= link_to 'Edit Cohort', edit_cohort_path(cohort), class:'UserLinks btn' %>
           |
-          <%= link_to 'Delete Cohort', cohort_path(cohort), method: :delete, class:'UserLinks btn' %>
+          <%= link_to 'Delete Cohort', cohort,  class:'deleteCohort UserLinks btn' %>
         </div>
       <% end %>
     </div>

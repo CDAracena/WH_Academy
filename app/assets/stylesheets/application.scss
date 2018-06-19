@@ -11,9 +11,8 @@
  * It is generally better to create a new file per style scope.
  *
 
- *= require bootstrap/scss/bootstrap
+ *= require bootstrap/scss/bootstrap.scss
  *= require toastr/toastr
- *= require_tree .
  *= require_self
  */
 
@@ -22,12 +21,12 @@
  @import 'partials/variables';
  @import 'partials/mixins';
  @import url('https://fonts.googleapis.com/css?family=Alegreya');
-@import url('https://fonts.googleapis.com/css?family=Alegreya|IBM+Plex+Serif');
+ @import url('https://fonts.googleapis.com/css?family=Alegreya|IBM+Plex+Serif');
 
-@font-face {
-  font-family: 'DJB Chalk It Up';
-  src: url('/assets/DJB_Chalk_It_Up');
-}
+ @font-face {
+   font-family: 'DJB Chalk It Up';
+   src: url('/assets/DJB_Chalk_It_Up');
+ }
 
  body {
    background-color: $primary-color;

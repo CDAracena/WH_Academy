@@ -31,7 +31,7 @@
 
       <% @instructors.each do |instructor| %>
 
-        <div class="py-1">
+        <div class="py-1 main-Instructors">
           <%= instructor.first_name %>
           <%= instructor.last_name %>
           <br>
@@ -39,7 +39,7 @@
           |
           <%=link_to 'Edit Instructor', edit_instructor_path(instructor), class:'UserLinks btn' %>
           |
-          <%= link_to 'Delete Instructor', instructor_path(instructor), method: :delete, class:'UserLinks btn' %>
+          <%= link_to 'Delete Instructor', instructor, class:'instructorDelete btn UserLinks' %>
         </div>
 
 

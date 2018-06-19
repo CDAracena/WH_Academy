@@ -1,5 +1,7 @@
 class StudentsController < ApplicationController
 before_action :authenticate_user!
+skip_before_action :verify_authenticity_token, only: [:destroy]
+
   def index
 
     @students = Student.all
@@ -41,8 +43,7 @@ before_action :authenticate_user!
   def destroy
     Student.destroy(params[:id])
 
-    redirect_to students_path
-
+    render json: {message: 'yo the student was deleted son'}
   end
 
   private
