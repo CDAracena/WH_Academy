@@ -36,14 +36,14 @@
 
       <%= f.label :course_id, 'Course' %>
       <%= f.select :course_id, options_for_select(@courses.map {|c| [c.name, c.id]}), class:'select' %>
-</div>
-  <div class="row mx-auto">
-    <div class="col-lg-12 mx-auto text-center py-1">
-      <%=f.submit "Create Cohort", class:'btn secondButton' %>
+    </div>
+    <div class="row mx-auto">
+      <div class="col-lg-12 mx-auto text-center py-1">
+        <%=f.submit "Create Cohort", class:'btn secondButton' %>
+      </div>
+
     </div>
 
-  </div>
-
-<% end %>
+  <% end %>
 
 </div>
